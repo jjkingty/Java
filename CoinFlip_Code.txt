@@ -1,0 +1,32 @@
+import java.util.*;
+
+public class CoinFlip {
+
+    public static void main(String[] args) {
+        int num = 0; // set to "Integer. MAX_VALUE " for a larger test
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter the number of flips: ");
+        num = input.nextInt();
+        coinflip(num);
+
+    }
+
+    public static void coinflip(int num) {
+        Random rnd = new Random();
+        boolean coin = true;
+        int heads = 0, tails = 0, flip = 0;
+        int[] fliplist = new int[2];
+        while (num > 0) {
+            flip = rnd.nextInt(2);
+            if (flip % 2 == 0) {
+                heads++;
+            } else {
+                tails++;
+            }
+            num--;
+
+        }
+        System.out.println("Heads = " + heads + " tails = " + tails);
+    }
+
+}
