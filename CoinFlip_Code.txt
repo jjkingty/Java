@@ -1,3 +1,5 @@
+// this code flips a coin a cirtain amout of times, then prints how many times the coin landed on heads/tails.
+
 import java.util.*;
 
 public class CoinFlip {
